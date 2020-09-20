@@ -433,6 +433,7 @@ img{
   }
   .contact__form{
     width: 360px;
+    align-items: center;
   }
   .contact__container{
     justify-items: center;

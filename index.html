@@ -17,7 +17,7 @@
         <header class="l-header">
             <nav class="nav bd-grid">
                 <div>
-                    <a href="#" class="nav__logo">Kuldeep Sharma</a>
+                    <a href="#" class="nav__logo">M y &nbsp P o r t f o l i o</a>
                 </div>
 
                 <div class="nav__menu" id="nav-menu">
@@ -158,26 +158,112 @@
                 </div>
             </section>
 
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location='http://kuldeeprsharma18.github.io/';}"></iframe> 
+
             <!--===== CONTACT =====-->
-            <section class="contact section" id="contact">
-                <h2 class="section-title">Contact</h2>
+            <!-- Start Contact Section -->
+ <div class="contact__container bd-grid" id="contact">
+  <div class="contact section" >
+    <h4 class="section-title"><b>Contact</b></h4>
 
-                <div class="contact__container bd-grid">
-                    <form action="POST" data-netlify="true" class="contact__form">
-                        <input type="text" placeholder="Name" name="name"class="contact__input">
-                        <input type="text" placeholder="Company Name" name="company name" class="contact__input">
-                        <input type="email" placeholder="Email" name="email" class="contact__input">
-                        <textarea name="message" id="message" cols="0" rows="10" placeholder="Message" class="contact__input"></textarea>
-                        <div class="field">
-                            <div data-netlify-recaptcha="true"></div>
-                        </div>
-                        <input type="button" value="Submit!" class="contact__button button">
-                    </form>
-                    
-                </div>
-            </section>
+    <script type="text/javascript">var submitted=false;</script>
+    
+    <!--Update the URL for thank you page on form submit -->
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"      
+    onload="if(submitted) {window.location='http://kuldeeprsharma18.github.io/';}"></iframe> 
+    
+    <!-- Update the Google forms URL in action-->
+    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeACKRairZvDnimnfj_7ph8RL2dBofx5Q4mynbo9yT5hRC__w/formResponse" method="post" target="hidden_iframe" onsubmit="return validateForm(); ">
 
-        </main>
+      
+      <div class="contact__form">
+        <label>Name</label>
+        <input class="contact__input" type="text" placeholder="" id="name" required name="entry.41384172">
+      </div>
+      <div class="contact__form">
+        <label>Email</label>
+        <input class="contact__input" type="text" placeholder="" id="email" required name="entry.2025508588">
+      </div>
+      <div class="contact__form">
+        <label>Phone</label>
+        <input class="contact__input" type="text" placeholder="" id="phone" required name="entry.1276154253">
+      </div>
+      <div class="contact__form">
+        <label>Message</label>
+        <textarea cols="0" rows="10" class="contact__input" type="text" placeholder="" id="phone" required name="entry.1882563709"></textarea>
+      </div>
+
+      <div class="contact__form">
+        <button class="contact__button button" type="submit">Submit</button>
+      </div>
+    </form>
+</div>
+</div>
+    <script type="text/javascript">
+    function validateName() {
+            var name = document.getElementById('name').value;
+            if(name.length == 0) {
+              alert("Name can't be blank") ;
+              return false;
+
+            }
+            if (!name.match(/^[a-zA-Z]{3,}(?: [a-zA-Z]+){0,2}$/)) {
+              alert("Please enter your correct name") ;//Validation Message
+              return false;
+            }
+            return true;
+          }
+
+          function validatePhone() {
+            var phone = document.getElementById('phone').value;
+            if(phone.length == 0) {
+              alert("Phone number can't be blank") ;//Validation Message
+              return false;
+            }
+
+            if(!phone.match(/^[0]?[789]\d{9}$/)) {
+             alert("Please enter a correct phone number") ;//Validation Message
+             return false;
+           }
+
+           return true;
+
+         }
+
+         function validateEmail () {
+
+          var email = document.getElementById('email').value;
+          if(email.length == 0) {
+            alert("Email can't be blank") ;//Validation Message
+            return false;
+
+          }
+
+          if(!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+            alert("Please enter a correct email address") ;//Validation Message
+            return false;
+
+          }
+
+          return true;
+
+        }
+
+
+        function validateForm() {
+          if (!validateName() || !validatePhone() || !validateEmail()) {
+
+            alert("Form not submitted");//Validation Message
+            return false;
+          }
+          else {
+            submitted=true;
+            return true;
+          }
+        }
+        </script>
+                     
+                       
 
         <!--===== FOOTER =====-->
         <footer class="footer">
